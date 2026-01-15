@@ -1,4 +1,7 @@
 import PyConsole
+import PyError
+from PyError import PyErrorMeta
+import inspect
 
 class PyCommand:
     def __init__(self):
@@ -10,13 +13,6 @@ class PyCommand:
 
     def Run(self, i, *args, **kwargs):
         if i in self.commandList:
-           cmd = self.commandList[i][2]
-           cmd(*args, **kwargs)
-        else:
-            print("Invalid Index")
-    def ShowCommands(self):
-        PyConsole.PrintHeader("Available Commands")
-        cmdList = []
-        for cmd in self.commandList:
-            cmdList.append(self.commandList[cmd][1])
-        PyConsole.PrintNumberedList(cmdList)
+            cmd = self.commandList[i][2]
+            PyError.BindMetadeta(i, cmd, *args, **kwargs)
+            cmd(*args, **kwargs)

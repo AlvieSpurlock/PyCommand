@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>b87727e2-bb60-4c73-981a-91eecb49a6d4</ProjectGuid>
+    <ProjectGuid>3360e797-7f05-44c4-8b1a-66c500d3be66</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PyCommand.py</StartupFile>
+    <StartupFile>PyError.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>PyCommand</Name>
-    <RootNamespace>PyCommand</RootNamespace>
+    <Name>PyError</Name>
+    <RootNamespace>PyError</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PyCommand.py" />
     <Compile Include="PyConsole.py" />
     <Compile Include="PyError.py" />
   </ItemGroup>
